@@ -1,0 +1,128 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Navbar Brand */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .navbar-brand a {
+    color: #ed8936;  /* Match button color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .navbar-brand a:hover {
+    color: #dd6b20; /* Match button hover color */
+  }
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Navbar Buttons */
+  .navbar-button {
+    color: white;
+    background-color: #ed8936;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+  }
+  
+  .navbar-button:hover {
+    background-color: #dd6b20;
+  }
+  
+  /* Dropdown */
+  .navbar-dropdown {
+    position: relative;
+  }
+  
+  .navbar-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    min-width: 10rem;
+    z-index: 10;
+  }
+  
+  
+  .navbar-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .dropdown-link:hover {
+    background-color: #dd6b20;
+  }
+  
+  /* Mobile Menu */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .navbar-button {
+      width: auto;
+      text-align: center;
+      padding: 0.5rem;
+      margin: 5px;
+    }
+  }
+  

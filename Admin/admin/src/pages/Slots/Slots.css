@@ -1,0 +1,98 @@
+/* ✅ Glassmorphism Container */
+.slots-section {
+    width: 400px;
+    max-width: 500px;
+    height: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    margin: 20px 20px;
+}
+
+/* ✅ Title */
+.slots-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* ✅ Form Group */
+.slots-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.slots-label {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+/* ✅ Input Field */
+.slots-input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0;
+}
+
+.slots-input:focus {
+    outline: none;
+    border: 1px solid rgba(237, 137, 54, 0.8);
+    box-shadow: 0 0 6px 2px rgba(237, 137, 54, 0.8);
+}
+
+.slots-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ✅ Button */
+.slots-button {
+    width: 50%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ed8936, #ff6600);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.slots-button:hover {
+    background: linear-gradient(135deg, #ff6600, #e65c00);
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .slots-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .slots-title {
+        font-size: 1.5rem;
+    }
+
+    .slots-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

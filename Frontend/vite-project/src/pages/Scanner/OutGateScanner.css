@@ -1,0 +1,98 @@
+/* OutGateScanner.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width:600px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #ffffffc3;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#reader {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.receipt {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 350px;
+  width: 100%;
+  color: black;
+}
+
+.receipt h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.receipt p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Print Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt, .receipt * {
+    visibility: visible;
+  }
+  .receipt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  width:200px;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.print-btn {
+  background-color: #28a745;
+}
+
+.print-btn:hover {
+  background-color: #1f7a31;
+}

@@ -1,0 +1,95 @@
+/* ✅ Glassmorphism Container */
+.workers-section {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    margin: 20px auto;
+}
+
+/* ✅ Title */
+.workers-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* ✅ Add Button */
+.workers-add-btn {
+    width: 40%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ed8936, #ff6600);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.workers-add-btn:hover {
+    background: linear-gradient(135deg, #ff6600, #e65c00);
+    transform: scale(1.05);
+}
+
+/* ✅ Workers List */
+.workers-list {
+    display: flex;
+    flex-direction:row;
+    gap: 12px;
+}
+
+/* ✅ Worker Card */
+.worker-card {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.worker-card:hover {
+    transform: scale(1.02);
+}
+
+.worker-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.worker-id {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .workers-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .workers-title {
+        font-size: 1.5rem;
+    }
+
+    .workers-add-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .worker-card {
+        padding: 12px;
+    }
+}

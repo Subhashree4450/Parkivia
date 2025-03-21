@@ -1,0 +1,117 @@
+
+.pricing-section {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+}
+
+/* ✅ Title */
+.pricing-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* ✅ Pricing Row */
+.pricing-row {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ✅ Individual Pricing Item */
+.pricing-item {
+    width: 20%; /* Three items in a row */
+    height:25%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease;
+}
+
+.pricing-item:hover {
+    transform: translateY(-4px);
+}
+
+/* ✅ Subheader */
+.pricing-subheader {
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* ✅ Input Group */
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    color: #fff;
+    width: 120px;
+}
+
+/* ✅ Input Field */
+.input-group input {
+    width: calc(100% - 130px);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    outline: none;
+    border: 1px solid rgba(237, 137, 54, 0.8);
+    box-shadow: 0 0 6px 2px rgba(237, 137, 54, 0.8);
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ✅ Button */
+.pricing-btn {
+    width: 20%;
+    padding: 12px;
+    margin-top: 35px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ed8936, #ff6600);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.pricing-btn:hover {
+    background: linear-gradient(135deg, #ff6600, #e65c00);
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+    .pricing-row {
+        flex-direction: column;
+    }
+
+    .pricing-item {
+        width: 100%; /* Stack vertically on smaller screens */
+    }
+}

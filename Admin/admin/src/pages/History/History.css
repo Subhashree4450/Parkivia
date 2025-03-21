@@ -1,0 +1,124 @@
+/* ✅ Container Styling */
+.history-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 160px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* ✅ Header Section (Title + Search Bar) */
+.history-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    overflow:hidden;
+}
+
+.history-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.history-search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.history-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.history-input:focus {
+    border-color: #ff6600;
+}
+
+.history-search-btn {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff6600, #e65c00);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.history-search-btn:hover {
+    background: linear-gradient(135deg, #e65c00, #d45400);
+}
+
+/* ✅ Table Section */
+.history-table-container {
+    max-height: 400px; /* ✅ Fixed height to prevent container resizing */
+    overflow-y: auto;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ✅ Table Styling */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.history-table th, 
+.history-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.history-table th {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: bold;
+}
+
+.history-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.history-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Fix height consistency */
+.history-table td {
+    height: 50px;
+    line-height: 1.5;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .history-search-container {
+        flex-direction: column;
+    }
+
+    .history-search-btn {
+        width: 100%;
+    }
+
+    .history-table th,
+    .history-table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
