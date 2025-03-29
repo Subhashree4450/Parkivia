@@ -1,148 +1,95 @@
-/* Admin Home Container */
-.admin-home {
+/* Admin Dashboard Container */
+.admin-dashboard-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+        url("https://plus.unsplash.com/premium_photo-1661963364879-5df552071ce9?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
     color: white;
-    min-height: 100vh;
-    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
-/* Navbar */
-.navbar {
+/* Content */
+.admin-dashboard-content {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem 2rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.navbar-logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ed8936;
-    text-transform: uppercase;
-}
-
-.navbar-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-    color: #ed8936;
-}
-
-.logout-button {
-    background-color: #ff4c4c;
-    padding: 0.7rem 1rem;
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.logout-button:hover {
-    background-color: #cc0000;
-}
-
-/* Header */
-.admin-home h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    margin-top: 4rem; /* Adjusted for navbar space */
-}
-
-/* Section Styling */
-.admin-section {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 0.8rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 2rem;
-}
-
-.admin-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.4rem;
-    color: #ed8936;
-}
-
-.admin-section label {
-    font-size: 0.8rem;
-}
-
-/* Input Fields */
-.admin-input {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border-radius: 4px;
-    border: none;
-    font-size: 0.8rem;
+    padding: 2rem;
     box-sizing: border-box;
 }
 
-/* Buttons */
-.admin-button {
-    background-color: #ed8936;
+.admin-dashboard-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.admin-dashboard-content p {
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding-top: 12px;
+}
+
+/* Dashboard Card */
+.admin-dashboard-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 12px;
     color: white;
-    border: none;
-    padding: 0.7rem 0.5rem;
-    margin-top: 0.3rem;
-    font-size: 0.8rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    box-sizing: border-box;
+}
+
+.admin-dashboard-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.admin-dashboard-card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.admin-dashboard-card strong {
+    color: #ed8936;
+}
+
+/* Error & Loading */
+.error {
+    color: red;
     font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-.admin-button:hover {
-    background-color: #dd6b20;
+.loading {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
+    .admin-dashboard-content h1 {
+        font-size: 2rem;
     }
 
-    .navbar-links {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0.5rem;
-    }
-
-    .admin-home {
+    .admin-dashboard-card {
+        width: 80%;
         padding: 1rem;
     }
+}
 
-    .admin-section {
-        width: 100%;
+@media (max-width: 480px) {
+    .admin-dashboard-card {
+        width: 95%;
     }
 }

@@ -1,98 +1,162 @@
-/* OutGateScanner.css */
+/* ✅ Glassmorphism Container */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width:600px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: #ffffffc3;
+  width: 52.5%;
+  max-width: 800px;
+  margin-top:80px;
+  margin-left: 430px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* ✅ Title */
 .title {
-  font-size: 24px;
-  color: #333;
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: #fff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
+/* ✅ QR Code Scanner */
 #reader {
-  width: 300px;
+  width: 71.6%;
+  max-width: 400px;
   height: 300px;
-  border: 2px solid #007bff;
-  border-radius: 10px;
-  background: white;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 20px;
 }
 
+/* ✅ Error Message */
 .error-message {
   color: red;
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
 }
 
+/* ✅ Receipt Styling */
 .receipt {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  max-width: 350px;
   width: 100%;
-  color: black;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .receipt h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #007bff;
+  font-size: 1.0rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #000000;
 }
 
 .receipt p {
-  font-size: 16px;
-  margin: 5px 0;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
 }
 
-/* Print Styling */
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  .receipt, .receipt * {
-    visibility: visible;
-  }
-  .receipt {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    text-align: left;
-    font-size: 14px;
-  }
+.receipt strong {
+  color: #000000;
 }
 
+/* ✅ Button Styling */
 .button {
-  margin-top: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  color: white;
-  width:200px;
-  background: #007bff;
+  width: 70%;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ed8936, #ff6600);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
 }
 
 .button:hover {
-  background: #0056b3;
+  background: linear-gradient(135deg, #ff6600, #e65c00);
+  transform: scale(1.05);
 }
 
 .print-btn {
-  background-color: #28a745;
+  background: linear-gradient(135deg, #4caf50, #45a049);
 }
 
 .print-btn:hover {
-  background-color: #1f7a31;
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+}
+
+/* ✅ Print-Specific Styling */
+@media print {
+  /* Hide everything except the receipt */
+  body * {
+    visibility: hidden;
+  }
+
+  .receipt, .receipt * {
+    visibility: visible;
+    color: #000 !important; /* Black text for printing */
+    background-color: #fff !important; /* White background for printing */
+  }
+
+  .receipt {
+    width: 100%; /* Ensure full width for printing */
+    padding: 20px;
+    box-shadow: none;
+    border: 1px solid #000;
+    margin: 0;
+  }
+
+  /* Hide buttons and unnecessary elements during printing */
+  .button, .navbar, .footer, .sidebar {
+    display: none !important;
+  }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  #reader {
+    height: 250px;
+  }
+
+  .receipt {
+    padding: 15px;
+  }
+
+  .receipt h2 {
+    font-size: 1.5rem;
+  }
+
+  .receipt p {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 10px;
+  }
 }

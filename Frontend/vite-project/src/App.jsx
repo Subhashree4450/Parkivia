@@ -1,25 +1,3 @@
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import QRCodeGenerator from "../src/components/QRCodeGenerator";
-// import OutGateScanner from "../src/components/OutGateScanner";
-// import SignUp from "../src/components/SignUp";
-// import Login from "../src/components/Login"
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<QRCodeGenerator />} />
-//         <Route path="/outgate" element={<OutGateScanner />} />
-//         <Route path="/signup" element={<SignUp />} />
-//         <Route path="/login" element={<Login/>}/>
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/pages/Home/Home"; // Import the Home component

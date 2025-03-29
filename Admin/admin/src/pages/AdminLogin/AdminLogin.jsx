@@ -1,57 +1,3 @@
-// import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-
-// const AdminLogin = () => {
-//     const [employeeId, setEmployeeId] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [error, setError] = useState("");
-//     const navigate = useNavigate();
-
-//     const handleLogin = async (e) => {
-//         e.preventDefault();
-//         setError("");
-
-//         try {
-//             const response = await fetch("http://localhost:3000/auth/login", {
-//                 method: "POST",
-//                 headers: { "Content-Type": "application/json" },
-//                 body: JSON.stringify({ employeeId, password }),
-//             });
-
-//             const data = await response.json();
-
-//             if (response.ok) {
-//                 if (data.role === "admin") {
-//                     localStorage.setItem("token", data.token);
-//                     localStorage.setItem("role", data.role);
-//                     navigate("/admin/home"); // ✅ Redirect to Admin Home Page
-//                 } else {
-//                     setError("Access denied. Only admins can log in.");
-//                 }
-//             } else {
-//                 setError(data.error || "Login failed.");
-//             }
-//         } catch (error) {
-//             setError("Server error. Try again later.");
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <h2>Admin Login</h2>
-//             {error && <p style={{ color: "red" }}>{error}</p>}
-//             <form onSubmit={handleLogin}>
-//                 <input type="text" placeholder="Employee ID" value={employeeId} onChange={(e) => setEmployeeId(e.target.value)} required />
-//                 <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-//                 <button type="submit">Login</button>
-//             </form>
-//         </div>
-//     );
-// };
-
-// export default AdminLogin;
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminLogin.css";
@@ -79,7 +25,7 @@ const AdminLogin = () => {
                 if (data.role === "admin") {
                     localStorage.setItem("token", data.token);
                     localStorage.setItem("role", data.role);
-                    navigate("/admin");
+                    navigate("/admin/home");
                 } else {
                     setError("Access denied. Only admins can log in.");
                 }

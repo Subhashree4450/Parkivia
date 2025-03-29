@@ -22,7 +22,7 @@ const Navbar = () => {
         {/* Login Button (Direct Link to SignIn.jsx) */}
         <Link to="/Login" className="navbar-button">Login</Link>
 
-        <Link to="/about-us" className="navbar-button">About Us</Link>
+        <Link to="/about-us" className="navbar-button">AboutUs</Link>
         <Link to="/help" className="navbar-button">Help</Link>
       </div>
     </nav>

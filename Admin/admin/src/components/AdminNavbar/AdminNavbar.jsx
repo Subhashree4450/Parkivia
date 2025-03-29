@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AdminNavbar.css';
@@ -5,29 +6,29 @@ import './AdminNavbar.css';
 const AdminNavbar = () => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/admin/login');
-  };
-
   return (
     <nav className="admin-navbar">
-      <div className="admin-navbar-brand">
+      <div 
+        className="admin-navbar-brand" 
+        onClick={() => navigate('/')}
+        style={{ cursor: 'pointer' }}
+      >
         <span>Admin Panel</span>
       </div>
       <div className="admin-navbar-links">
-        {/* Navigation Buttons */}
-        <button onClick={() => navigate('/admin/slots')} className="admin-navbar-button">Slots</button>
-        <button onClick={() => navigate('/admin/pricing')} className="admin-navbar-button">Pricing</button>
-        <button onClick={() => navigate('/admin/workers')} className="admin-navbar-button">Workers</button>
-        <button onClick={() => navigate('/admin/history')} className="admin-navbar-button">History</button>
-        <button onClick={() => navigate('/admin/revenue')} className="admin-navbar-button">Revenue</button>
-
-        {/* Logout Button */}
-        <button onClick={handleLogout} className="admin-navbar-button logout-button">Logout</button>
+        <span className="admin-navbar-text" onClick={() => navigate('/admin/slots')}>Slots</span>
+        <span className="admin-navbar-text" onClick={() => navigate('/admin/pricing')}>Pricing</span>
+        <span className="admin-navbar-text" onClick={() => navigate('/admin/workers')}>Workers</span>
+        <span className="admin-navbar-text" onClick={() => navigate('/admin/history')}>History</span>
+        <span className="admin-navbar-text" onClick={() => navigate('/admin/revenue')}>Revenue</span>
+        <span className="admin-navbar-text logout-text" onClick={() => {
+          localStorage.removeItem('token');
+          navigate('/admin/login');
+        }}>Logout</span>
       </div>
     </nav>
   );
 };
 
 export default AdminNavbar;
+

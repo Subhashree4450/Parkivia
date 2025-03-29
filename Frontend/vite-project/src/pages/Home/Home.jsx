@@ -1,30 +1,3 @@
-// import React from "react";
-// import Navbar from "../../components/Navbar/Navbar"; // Import Navbar
-// import "./Home.css"; // Import the styles
-
-// const HomePage = () => {
-//   return (
-//     <div className="homepage-container">
-//       <Navbar /> {/* ✅ Navbar is ONLY on Home Page */}
-      
-//       <div className="homepage-content">
-//         <h1>Welcome to Parkivia</h1>
-//         <p>Parking made simple!</p>
-
-//         {/* Card Component */}
-//         <div className="homepage-card">
-//           <h2>Parking Details</h2>
-//           <p><strong>Total Number Of Slots:</strong> 250</p>
-//           <p><strong>Number Of Slots Available:</strong> 68</p>
-//           <p><strong>Chance Of Getting Your Slot:</strong> 52%</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomePage;
-
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Home.css";

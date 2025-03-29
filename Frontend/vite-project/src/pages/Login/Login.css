@@ -1,21 +1,12 @@
-/* ✅ General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-size: cover;
-  position: relative;
-}
+
 
 /* ✅ Glassmorphism Container */
 .login-container {
   display: flex;
   width: 950px;
   max-width: 1100px;
+  margin-top:15px;
+  margin-left:160px;
   height: 80vh;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;

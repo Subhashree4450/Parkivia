@@ -1,88 +1,3 @@
-
-
-// //20/2
-// // const express = require("express");
-// // const { generateQR } = require("./controllers/incontroller");
-// // const { scanOut } = require("./controllers/outcontroller");
-// // const authMiddleware = require("./middleware/auth"); // Import Auth Middleware
-
-// // const router = express.Router();
-
-// // // Public Routes
-// // router.post("/generate-qr", generateQR);
-// // router.post("/scan-qr", scanOut);
-
-// // // Example Protected Route (requires valid JWT)
-// // router.get("/protected", authMiddleware, (req, res) => {
-// //   res.json({ message: "✅ Access granted to protected route", user: req.user });
-// // });
-
-// // module.exports = router;
-
-
-
-
-// const express = require("express");
-// const { generateQR } = require("./controllers/incontroller");
-// const { scanOut } = require("./controllers/outcontroller");
-// const {
-//   getParkingConfig,
-//   updateTotalSlots,
-//   updatePricing,
-//   getWorkers,
-// } = require("./controllers/admincontroller");
-// const { authMiddleware } = require("./middleware/auth");
-
-// const router = express.Router();
-
-// // Public Routes
-// router.post("/generate-qr", authMiddleware, generateQR);
-// router.post("/scan-qr", authMiddleware, scanOut);
-
-// // Parking Configuration Routes (Admin Only)
-// router.get("/admin/config", authMiddleware, getParkingConfig); // Get parking config (slots & pricing)
-// router.put("/admin/slots", authMiddleware, updateTotalSlots); // Update total slots
-// router.put("/admin/pricing", authMiddleware, updatePricing); // Update pricing
-
-// // Worker Management Routes (Admin Only)
-// router.get("/workers", authMiddleware, getWorkers);
-
-// module.exports = router;
-
-// const express = require("express");
-// const { generateQR } = require("./controllers/incontroller");
-// const { scanOut } = require("./controllers/outcontroller");
-// const {
-//   getParkingConfig,
-//   updateTotalSlots,
-//   updatePricing,
-//   getWorkers,
-// } = require("./controllers/admincontroller");
-// const { getHistory } = require("./controllers/historyController");
-// const { authMiddleware } = require("./middleware/auth");
-// const { getRevenue } = require("./controllers/revenueController");
-
-// const router = express.Router();
-
-// // Public Routes
-// router.post("/generate-qr", authMiddleware, generateQR);
-// router.post("/scan-qr", authMiddleware, scanOut);
-
-// // Parking Configuration Routes (Admin Only)
-// router.get("/admin/config", authMiddleware, getParkingConfig);
-// router.put("/admin/slots", authMiddleware, updateTotalSlots);
-// router.put("/admin/pricing", authMiddleware, updatePricing);
-
-// // Worker Management Routes (Admin Only)
-// router.get("/workers", authMiddleware, getWorkers);
-
-// // History Routes (Admin Only)
-// router.get("/admin/history", authMiddleware, getHistory);
-// router.get("/admin/revenue", authMiddleware, getRevenue);
-
-// module.exports = router;
-
-
 const express = require("express");
 const { generateQR } = require("./controllers/incontroller");
 const { scanOut } = require("./controllers/outcontroller");
@@ -94,7 +9,7 @@ const {
 } = require("./controllers/admincontroller");
 const { getHistory } = require("./controllers/historyController");
 const { authMiddleware } = require("./middleware/auth");
-const { getRevenue } = require("./controllers/revenueController");
+const { getRevenue } = require("./controllers/historyController");
 const { getParkingDetails } = require("./controllers/homeController");
 
 const router = express.Router();

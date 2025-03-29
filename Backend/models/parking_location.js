@@ -22,4 +22,12 @@ const ParkingConfigSchema = new mongoose.Schema({
   }
 });
 
+ParkingConfigSchema.pre('findOneAndUpdate', async function(next) {
+  const update = this.getUpdate();
+  if (update.totalSlots !== undefined) {
+    update.availableSlots = update.totalSlots;
+  }
+  next();
+});
+
 module.exports = mongoose.model("ParkingConfig", ParkingConfigSchema);

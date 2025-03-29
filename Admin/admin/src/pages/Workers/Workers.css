@@ -10,27 +10,27 @@
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    margin: 20px auto;
 }
 
 /* ✅ Title */
 .workers-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
     font-weight: bold;
     color: white;
 }
 
 /* ✅ Add Button */
 .workers-add-btn {
-    width: 40%;
+    width: 20%;
     padding: 12px;
     margin-bottom: 20px;
+    margin-top:20px;
     border: none;
     border-radius: 8px;
     background: linear-gradient(135deg, #ed8936, #ff6600);
     color: white;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -46,6 +46,7 @@
     display: flex;
     flex-direction:row;
     gap: 12px;
+    margin-top:20px;
 }
 
 /* ✅ Worker Card */
@@ -64,12 +65,12 @@
 }
 
 .worker-name {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
 .worker-id {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -81,11 +82,11 @@
     }
 
     .workers-title {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
     }
 
     .workers-add-btn {
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 10px;
     }
 

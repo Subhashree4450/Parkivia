@@ -1,8 +1,9 @@
 /* ✅ Container Styling */
 .history-container {
     width: 100%;
+    height: 0%;
     max-width: 1000px;
-    margin-top: 160px;
+    margin-top: 70px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -19,10 +20,12 @@
 }
 
 .history-title {
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     font-weight: bold;
     color: white;
     margin-bottom: 12px;
+    margin-top: 12px;
+    align-self: center;
 }
 
 .history-search-container {
@@ -32,12 +35,12 @@
 
 .history-input {
     flex-grow: 1;
-    padding: 12px;
+    padding: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     outline: none;
     transition: border-color 0.3s ease;
 }
@@ -47,12 +50,13 @@
 }
 
 .history-search-btn {
-    padding: 12px 20px;
+    padding: 8px 20px;
     background: linear-gradient(135deg, #ff6600, #e65c00);
     border: none;
     border-radius: 8px;
     color: white;
     font-weight: bold;
+    font-size: 0.7rem;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -63,7 +67,7 @@
 
 /* ✅ Table Section */
 .history-table-container {
-    max-height: 400px; /* ✅ Fixed height to prevent container resizing */
+    max-height: 300px; /* ✅ Fixed height to prevent container resizing */
     overflow-y: auto;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.05);
@@ -78,7 +82,7 @@
 
 .history-table th, 
 .history-table td {
-    padding: 12px;
+    padding: 0px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
@@ -88,12 +92,19 @@
 }
 
 .history-table th {
-    background-color: rgba(255, 255, 255, 0.15);
+    position:sticky;
+    top: 0;
+    background-color: rgb(81, 81, 81); /* ✅ Ensure it contrasts well */
     font-weight: bold;
+    font-size:0.8rem;
+    z-index: 10;
+    padding: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .history-table tr {
     transition: background-color 0.3s ease;
+    font-size:0.8rem;
 }
 
 .history-table tr:hover {
@@ -118,7 +129,7 @@
 
     .history-table th,
     .history-table td {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         padding: 10px;
     }
 }
